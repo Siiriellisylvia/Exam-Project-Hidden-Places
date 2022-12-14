@@ -6,59 +6,196 @@
     --headline-fonts: "Londrina Solid", sans-serif;
   }
 
+
   html, body {
     top:0;
     bottom:0;
     left:0;
     right:0;
+    background-color: var(--white);
 }
 
+  /* TOP NAVIGATION */
 .navigation {
-/*nav fix position to top*/
     background-color: var(--white);
+    overflow: hidden;
+/*fix navigation to top*/
     position: fixed;
     top: 0;
     left:0;
     width: 100%;
-    z-index: 3;
-    display: flex;
-    flex-direction: row;
+    z-index: 89;
   }
 
-.logo {
-position: left;
-top:0;
-width: 5vw;
-height:auto;
-}
-
-.navigation a {
-display: inline-block;
-font-family: "Lato";
-font-size: 1vw;
-margin-top: 2vw;
-margin-bottom:1vw;
-margin-left:15vw;
-padding: 1vw;
-text-decoration: none;
-color: black;
-}
-
-.navigation a:visited {
+/* Navigation bar - logo alignment to the left */
+.logo img {
+    float: left;
+    width: 8%;
+    margin-top:0.5vw;
+    margin-left:1.5vw;
+    min-width:5rem;
+      }
+  
+.link-list {
+    margin-left: 35vw;
+    }
+         
+  /* Navigation bar link styling */
+  .link-list a {
+    padding: 1.5vw;
+    font-size: 1rem;
+    font-family: var(--body-fonts);
+    float: left;
+    color:var(--black);
+    text-align: center;
     text-decoration: none;
+  }
+
+  
+  /* Navigation bar - hover effects on links */
+  .navigation a:hover {
+    color: var(--pink);
+    font-weight: bold;
+  }
+  
+  /* Navigation bar - format the active link */
+  .navigation a.active {
+    color: var(--pink);
+    font-weight: bold;
+  }
+
+  /* Remove underline on visited */
+  .navigation a:visited {
+    text-decoration: none;
+  }
+/* 
+  /* Navigation bar - search icon alignment to the right */
+  .search-icon img {
+    float: right;
+    width:2.5%;
+    min-width:1.5rem;
+    margin-top:1vw;
+    margin-right:1vw;
+  }
+
+/* Style the search box inside the navigation bar */
+
+/* .navigation input[type=text] {
+    float: right;
+    padding: 0.5vw;
+    border: none;
+    margin-top: 1vw;
+    margin-right: 2vw;
+    font-size: 1rem;
+  } */
+
+
+  .main-container { 
+    position: absolute;
+    margin:0;
+    left:0;
+    right:0;
+    top:0;
+    max-width: 100%;
 }
 
-.navigation a:hover {
-color:var(--pink);
-font-weight: bold;
+.main-container img {
+    position:absolute;
+    max-width:100%;
+    height: auto;
+    z-index:1;
 }
 
-.navigation a:active {
-font-weight: bold;
+.headline-firstline {
+    position: absolute;
+    top:10vw;
+    left:10vw;
+    z-index:88;
+    font-family: var(--headline-fonts);
+    font-size: 4.5vw;
+    color: var(--white);
 }
 
-.search-icon {
-    width:10%;
-    height:auto;
+.headline-secondline {
+    position: absolute;
+    top:12.5vw;
+    left:10vw;
+    z-index:88;
+    font-family: 'Londrina Outline';
+    font-size: 6.2vw;
+    color: var(--white);
+}
+
+.description-container {
+    position:absolute;
+    opacity: 50%;
+    width: 24vw;
+    height:10vw;
+    background-color: var(--white);
+    z-index:85;
+    top:24.5vw;
+    left:10vw;
+    border-radius: 5px;
+}
+
+.main-description {
+  position:absolute;
+    text-align:left;
+    margin-left:1vw;
+    margin-right:1vw;
+    z-index:88;
+    color:var(--black);
+    font-family: var(--body-fonts);
+    font-size:1.2vw;
+}
+
+.content-cards {
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 3vw;
+  margin-top: 49vw;
+  background-color: var(--pink);
+  left:0;
+  right:0;
+  height:30vw;
+  z-index:1;
+}
+
+.card-content-container {
+display:flex;
+flex-direction: column;
+
+}
+
+.card-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:24vw;
+  height: 20vw;
+  border-radius: 10px;
+  background-color: var(--white);
+  z-index:3;
+}
+
+.main-link {
+  text-decoration: none;
+  color:var(--white);
+  font-size: 2vw;
+  font-family: var(--body-fonts);
+  text-align: center;
+  padding:1.5vw;
+}
+.main-image {
+  width: 24vw;
+  height: 20vw;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0vw;
+  object-fit: cover;
+  object-position: 100% 25%;
 }
 

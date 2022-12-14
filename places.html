@@ -32,5 +32,128 @@
             </div>
     </div>
 
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+
+<style>
+body { margin: 0; padding: 0; background-color: #F3F0EF;}
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+</style>
+</head>
+
+<body>
+
+<style>
+#marker-casataos {
+background-image: url('casataos-map.jpg');
+background-size: cover;
+width: 7vw;;
+height: 7vw;
+border-radius: 50%;
+cursor: pointer;
+}
+
+#marker-nomad {
+background-image: url('nomad-map.jpg');
+background-size: cover;
+width: 7vw;;
+height: 7vw;
+border-radius: 50%;
+cursor: pointer;
+}
+
+#marker-paloalto {
+background-image: url('paloalto-map.jpg');
+background-size: cover;
+width: 7vw;;
+height: 7vw;
+border-radius: 50%;
+cursor: pointer;
+}
+
+/* .mapboxgl-popup-close-button */
+
+.mapboxgl-popup-content {
+    background-color: #C36955;
+    width:40vw;
+    height:24vw;
+    color: white;
+    font-family: 'Lato';
+}
+
+.mapboxgl-popup p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.mapboxgl-popup img {
+    width: 30%;
+    height:auto;
+}
+
+
+</style>
+ 
+<div id="map"></div>
+ 
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2lpcmllbGxpIiwiYSI6ImNsOWdxOXE4dDE0bGEzd2w5MHd6aXI1MGoifQ.oJuzGPqkmdH1XETiiny3Fg';
+const casataos = [2.1919539228746268, 41.39831781783268];
+const nomad = [2.196298456707125, 41.39812489241088];
+const paloalto = [2.2107328106824884, 41.40453678277453];
+const centermap = [2.205423, 41.400758]
+const map = new mapboxgl.Map({
+container: 'map',
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+style: 'mapbox://styles/siirielli/clbifbv2e000r14odlbvsnzwn',
+center: centermap,
+zoom: 14.5 // starting zoom
+});
+ 
+// create the popup
+const popupcasataos = new mapboxgl.Popup({ offset: 40 }).setText(
+'Casa Taos'
+);
+
+const popupnomad = new mapboxgl.Popup({ offset: 40 }).setHTML("<p>Hello World!</p><img src = 'casataos-map.jpg' > </img>");
+
+const popuppaloalto = new mapboxgl.Popup({ offset: 40 }).setText(
+'Palo Alto Market'
+);
+ 
+// create DOM element for the marker
+const casataosmarker = document.createElement('div');
+casataosmarker.id = 'marker-casataos';
+
+const nomadmarker= document.createElement('div');
+nomadmarker.id = 'marker-nomad';
+
+const paloaltomarker = document.createElement('div');
+paloaltomarker.id = 'marker-paloalto';
+ 
+// create the marker
+new mapboxgl.Marker(casataosmarker)
+.setLngLat(casataos)
+.setPopup(popupcasataos) // sets a popup on this marker
+.addTo(map);
+
+new mapboxgl.Marker(nomadmarker)
+.setLngLat(nomad)
+.setPopup(popupnomad) // sets a popup on this marker
+.addTo(map);
+
+new mapboxgl.Marker(paloaltomarker)
+.setLngLat(paloalto)
+.setPopup(popuppaloalto) // sets a popup on this marker
+.addTo(map);
+
+</script>
+ 
+</body>
+</html>
+Copy
+© MapboxTermsPrivacySecurity
 </body>
 </html>
