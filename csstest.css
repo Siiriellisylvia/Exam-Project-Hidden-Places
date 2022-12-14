@@ -1,0 +1,77 @@
+:root {
+    --pink: #C36955;
+    --white: #F3F0EF;
+    --black: #000000;
+    --body-fonts: "Lato";
+    --headline-fonts: "Londrina Solid", sans-serif;
+  }
+
+
+  html, body {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+  /* TOP NAVIGATION */
+.navigation {
+    background-color: var(--white);
+    overflow: hidden;
+/*fix navigation to top*/
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 3;
+  }
+
+/* Navigation bar - logo alignment to the left */
+.logo img {
+    float: left;
+    width: 8%;
+    margin-top:1vw;
+    margin-left:1vw;
+    margin-bottom:1vw;
+      }
+  
+.link-list {
+    margin-left: 35vw;
+    }
+         
+  /* Navigation bar link styling */
+  .link-list a {
+    padding: 2vw;
+    font-size: 1rem;
+    font-family: var(--body-fonts);
+    float: left;
+    color:var(--black);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  
+  /* Navigation bar - hover effects on links */
+  .navigation a:hover {
+    color: var(--pink);
+    font-weight: bold;
+  }
+  
+  /* Navigation bar - format the active link */
+  .navigation a.active {
+    color: var(--pink);
+    font-weight: bold;
+  }
+
+  /* Remove underline on visited */
+  .navigation a:visited {
+    text-decoration: none;
+  }
+
+  /* Navigation bar - search icon alignment to the right */
+  .search-icon img {
+    float: right;
+    width:2.5%;
+    margin-top:1vw;
+    margin-right:1vw;
+  }
