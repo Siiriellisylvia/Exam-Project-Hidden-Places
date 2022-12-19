@@ -15,6 +15,7 @@
 </head>
 <body>
 
+<!-- Top navigation -->
     <div class="navigation">
         <div class="logo">
             <a href="index.html"><img src="images/logo.png" alt="logo"></a>
@@ -32,72 +33,38 @@
             </div>
     </div>
 
+<!-- Map element -->
+    <div id="map"></div>
+
+<!-- Popup element -->
+    <div id="casataosPopup">
+            <div class="popup-headingandimage">
+                <img src="images/casataos-map.jpg" alt="Casa Taos Image" class="popup-image">
+                <h1 class="popup-headline">CASA TAOS</h1>
+            </div>
+
+            <div class="popup-content">
+                <a href="#"><img class="popup-x" src="images/x-button.svg" onclick="MarkerOnClick()"></a>
+                <h2 class="popup-subheading">Interesting catchy stuff here</h2>
+                <p class="popup-description">From the outside you can't really tell what hides inside - but peek in and be welcomed with open arms! 
+                    <br><br>
+                    They are happy to tell you about the concept, they're very proud of it, as they should! The cafe is zero waste, and  Taste the daily menu and  check out the locally made ceramics hiding in the corner!
+                    You can also have a look at the green coworking space behind the glass, it's for members only but you can get a day pass!  
+                     </p>
+                <div class="popup-footer">
+                    <a class="popup-button" id="popupButton" href="https://taosliving.com/">WEBSITE</a>
+                    <a class="popup-button" id="popupButton" href="https://www.google.com/maps/@41.3980119,2.1918851,3a,75y,50.62h,97.68t/data=!3m6!1e1!3m4!1spxFpS7SDD0ULdZo1oU01qQ!2e0!7i16384!8i8192?shorturl=1"
+                    >GOOGLE MAPS</a>
+                </div>
+            </div>
+    </div>
+    
+    </div>
+
 
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 
-<style>
-body { margin: 0; padding: 0; background-color: #F3F0EF;}
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-
-</style>
-</head>
-
-<body>
-
-<style>
-#marker-casataos {
-background-image: url('casataos-map.jpg');
-background-size: cover;
-width: 7vw;;
-height: 7vw;
-border-radius: 50%;
-cursor: pointer;
-}
-
-#marker-nomad {
-background-image: url('nomad-map.jpg');
-background-size: cover;
-width: 7vw;;
-height: 7vw;
-border-radius: 50%;
-cursor: pointer;
-}
-
-#marker-paloalto {
-background-image: url('paloalto-map.jpg');
-background-size: cover;
-width: 7vw;;
-height: 7vw;
-border-radius: 50%;
-cursor: pointer;
-}
-
-/* .mapboxgl-popup-close-button */
-
-.mapboxgl-popup-content {
-    background-color: #C36955;
-    width:40vw;
-    height:24vw;
-    color: white;
-    font-family: 'Lato';
-}
-
-.mapboxgl-popup p {
-    font-weight: bold;
-    text-align: center;
-}
-
-.mapboxgl-popup img {
-    width: 30%;
-    height:auto;
-}
-
-
-</style>
- 
-<div id="map"></div>
- 
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2lpcmllbGxpIiwiYSI6ImNsOWdxOXE4dDE0bGEzd2w5MHd6aXI1MGoifQ.oJuzGPqkmdH1XETiiny3Fg';
 const casataos = [2.1919539228746268, 41.39831781783268];
@@ -111,18 +78,7 @@ style: 'mapbox://styles/siirielli/clbifbv2e000r14odlbvsnzwn',
 center: centermap,
 zoom: 14.5 // starting zoom
 });
- 
-// create the popup
-const popupcasataos = new mapboxgl.Popup({ offset: 40 }).setText(
-'Casa Taos'
-);
 
-const popupnomad = new mapboxgl.Popup({ offset: 40 }).setHTML("<p>Hello World!</p><img src = 'casataos-map.jpg' > </img>");
-
-const popuppaloalto = new mapboxgl.Popup({ offset: 40 }).setText(
-'Palo Alto Market'
-);
- 
 // create DOM element for the marker
 const casataosmarker = document.createElement('div');
 casataosmarker.id = 'marker-casataos';
@@ -132,22 +88,37 @@ nomadmarker.id = 'marker-nomad';
 
 const paloaltomarker = document.createElement('div');
 paloaltomarker.id = 'marker-paloalto';
- 
+
 // create the marker
 new mapboxgl.Marker(casataosmarker)
 .setLngLat(casataos)
-.setPopup(popupcasataos) // sets a popup on this marker
-.addTo(map);
+.addTo(map)
+.getElement().addEventListener('click', () => {MarkerOnClick();});
 
 new mapboxgl.Marker(nomadmarker)
 .setLngLat(nomad)
-.setPopup(popupnomad) // sets a popup on this marker
 .addTo(map);
 
 new mapboxgl.Marker(paloaltomarker)
 .setLngLat(paloalto)
-.setPopup(popuppaloalto) // sets a popup on this marker
 .addTo(map);
+
+// open and close popup
+function MarkerOnClick(){
+    var hiddenstyle = document.getElementById ('casataosPopup');
+    var BackgroundContent=document.getElementById("map");
+
+    if (hiddenstyle.style.display == 'block')
+    {
+        hiddenstyle.style.display = 'none';
+        BackgroundContent.style.filter= "blur(0px)"
+    }
+
+    else
+    {
+        hiddenstyle.style.display = 'block';
+        BackgroundContent.style.filter= "blur(3px)";
+    }}
 
 </script>
  
@@ -155,5 +126,3 @@ new mapboxgl.Marker(paloaltomarker)
 </html>
 Copy
 © MapboxTermsPrivacySecurity
-</body>
-</html>
