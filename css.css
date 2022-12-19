@@ -4,10 +4,11 @@
     --white: #F3F0EF;
     --black: #000000;
     --green:#C2C975;
+    --light-green:#F0F2DC;
     --body-fonts: "Lato";
     --headline-fonts: "Londrina Solid", sans-serif;
     --font-size-subheading-desktop:2vw;
-    --font-size-bodytext-desktop:1.2vw;
+    --font-size-bodytext-desktop:1.1vw;
   }
 
 
@@ -314,6 +315,19 @@ cursor: pointer;
   border-radius: 5px;
 }
 
+#frontCasataosPopup{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  margin-top:0;
+  margin-left:5vw;
+  z-index:200;
+  width:89vw;
+  height:40vw;
+  background-color: white;
+  display:none;
+  border-radius: 5px;
+}
 .popup-headingandimage {
   position: absolute;
   width:30vw;
@@ -405,6 +419,7 @@ padding:2vw;
 
   .popup-button:hover {
     background-color: var(--pink);
+    color:white;
   }
 
 #marker-nomad {
@@ -430,3 +445,353 @@ cursor: pointer;
     margin-top:20vw;
     margin-left:10vw;
 }
+
+/* ABOUT PAGE CONTENT */
+
+#about-page {
+  position:relative;
+  display:flex;
+  flex-direction: row;
+  margin-top:4.7vw;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:3;
+  width:95vw;
+  height:47vw;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.about-headingandimage {
+  position: absolute;
+  width:30vw;
+  height:30vw;
+  float:left;
+}
+
+.about-image {
+  position:absolute;
+  width:47.5vw;
+  height:47vw;
+  z-index: 1;
+  object-fit: cover;
+  object-position: 100% 55%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.about-headline {
+  position: absolute;
+  margin-top:0.5vw;
+  margin-left:1vw;
+  z-index:2;
+  font-family: var(--headline-fonts);
+  letter-spacing: 0.1vw;
+  font-size:3.5vw;
+  color: var(--white);
+}
+
+.about-content {
+display: flex;
+flex-direction: column;
+position: absolute;
+background-color: white;
+width:47.5vw;
+height:47vw;
+margin-left: 47.5vw;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+
+.about-subheading {
+  font-family: var(--body-fonts);
+  color:var(--pink);
+  text-align: center;
+  font-size: var(--font-size-subheading-desktop);
+  margin-top:3.5vw;
+  margin-bottom:0;
+  padding-bottom:4vw;
+}
+
+.about-whatwhowhy {
+  font-family: var(--body-fonts);
+  font-size: var(--font-size-bodytext-desktop);
+  color:var(--black);
+  text-align: left;
+  font-weight: bold;
+  margin:0;
+  padding-left:3vw;
+  padding-bottom:0.5vw;
+  }
+
+.about-description {
+font-family: var(--body-fonts);
+font-size: var(--font-size-bodytext-desktop);
+color:var(--black);
+padding-left:3vw;
+padding-right:3vw;
+margin-top:0.5vw;
+line-height: 1.5vw;
+}
+
+.about-footer {
+  position: absolute;
+  background-color: var(--pink);
+  margin-top:37vw;
+  width:47.5vw;
+  height:10vw;
+  align-content: center;
+}
+.about-footer-text {
+  font-family: var(--body-fonts);
+  font-size: 1.3vw;
+  color:var(--white);
+  margin-top:2vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* SAY HI PAGE */
+.sayhi-page {
+  position:relative;
+  display:flex;
+  flex-direction: row;
+  margin-top:4.7vw;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:3;
+  width:95vw;
+  height:47vw;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.sayhi-headingandimage {
+  position: absolute;
+  width:30vw;
+  height:30vw;
+  float:left;
+}
+
+.sayhi-image {
+  position:absolute;
+  width:47.5vw;
+  height:47vw;
+  z-index: 1;
+  object-fit: cover;
+  object-position: 100% 55%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.sayhi-headline {
+  position: absolute;
+  margin-top:0.5vw;
+  margin-left:1vw;
+  z-index:2;
+  font-family: var(--headline-fonts);
+  letter-spacing: 0.1vw;
+  font-size:3.5vw;
+  color: var(--white);
+}
+
+.sayhi-content {
+display: flex;
+flex-direction: column;
+position: absolute;
+background-color: var(--light-green);
+width:47.5vw;
+height:47vw;
+margin-left: 47.5vw;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.sayhi-header {
+  position: absolute;
+  background-color: var(--green);
+  margin-top:0vw;
+  width:47.5vw;
+  height:10vw;
+  align-content: center;
+  border-top-right-radius: 5px;
+}
+.sayhi-header-text {
+  font-family: var(--body-fonts);
+  font-size: var(--font-size-subheading-desktop);
+  color:var(--black);
+  margin-top:3.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sayhi-description {
+font-family: var(--body-fonts);
+font-size: var(--font-size-bodytext-desktop);
+color:var(--black);
+padding-left:6vw;
+padding-right:6vw;
+margin-top:13vw;
+line-height: 1.5vw;
+}
+
+.sayhi-form {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+input[type=text]{
+  background-color: white;
+  color:var(--black);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--body-fonts);
+  text-decoration: none;
+  font-size: 1vw;
+  width: 35vw;
+  height:2vw;
+  padding-left:1vw;
+  padding-top:0.5vw;
+  padding-bottom: 0.5vw;
+  margin-bottom:1vw;
+}
+
+input[id=message]{
+  background-color: white;
+  color:var(--black);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--body-fonts);
+  text-decoration: none;
+  font-size: 1vw;
+  height:7vw;
+}
+
+input[type=submit] {
+  background-color: var(--green);
+  color:var(--black);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: var(--body-fonts);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1vw;
+  width:10vw;
+  height:2.5vw;
+  margin-left:12.5vw;
+}
+
+input[type=submit]:hover {
+  background-color: var(--pink);
+  color:var(--white);
+}
+
+/* THANK YOU PAGE FORMATTING */
+.thankyou-description {
+  font-family: var(--body-fonts);
+  font-size: var(--font-size-bodytext-desktop);
+  color:var(--black);
+  padding-left:6vw;
+  padding-right:6vw;
+  margin-top:13vw;
+  text-align: center;
+  }
+
+  .thankyou-buttons {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:20vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .yesplease-button {
+      display:block;
+      text-decoration: none;
+      font-family:var(--body-fonts);
+      font-size: 1vw;
+      font-weight: bold;
+      color:var(--black);
+      width:10vw;
+      height:2vw;
+      background-color: white;
+      border-radius: 20px;
+      text-align: center;
+      margin-top:5vw;
+      padding-top:0.6vw;
+    }
+
+    .yesplease-button:hover {
+      background-color: var(--green);
+    }
+
+    .backhome-button {
+      display:block;
+      text-decoration: none;
+      font-family:var(--body-fonts);
+      font-size: 1vw;
+      font-weight: bold;
+      color:var(--black);
+      width:10vw;
+      height:2vw;
+      background-color: var(--green);
+      border-radius: 20px;
+      text-align: center;
+      margin-top:5vw;
+      padding-top:0.6vw;
+      margin-left:2vw;
+    }
+
+    .backhome-button:hover {
+      background-color: var(--pink);
+      color:var(--white);
+    }
+
+    /* CASATAOS PAGE FORMATTING */
+.casataos-subheading {
+    font-family: var(--body-fonts);
+    color:var(--black);
+    text-align: center;
+    font-size: var(--font-size-subheading-desktop);
+    margin-top:2vw;
+    margin-bottom:0;
+    padding-bottom:4vw;
+  }
+
+    .casataos-footer {
+      position: absolute;
+      background-color: var(--green);
+      margin-top:37vw;
+      width:47.5vw;
+      height:10vw;
+      display:flex;
+      flex-direction: column;
+      gap: 2vw;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .casataos-button {
+      display:block;
+      text-decoration: none;
+      font-family:var(--body-fonts);
+      font-size: 1vw;
+      font-weight: bold;
+      color:var(--black);
+      width:10vw;
+      height:2vw;
+      background-color: white;
+      border-radius: 20px;
+      text-align: center;
+      padding-top:0.6vw;
+    }
+
+    .casataos-button:hover {
+      background-color: var(--pink);
+      color:var(--white);
+    }
