@@ -795,3 +795,36 @@ input[type=submit]:hover {
       background-color: var(--pink);
       color:var(--white);
     }
+
+
+/* breakpoints*/
+
+/*for larger devices*/
+@media only screen and (min-width: 600px) {
+  .mobile-navigation
+  .mobile-main-content-cards 
+  .navigation-mobile 
+  {
+      display: none;
+  }
+
+
+  .navigation-mobile {
+      display:none;
+  }
+}
+
+/*for small devices*/
+
+@media only screen and (max-width: 599px) {
+  .navigation
+  .main-container
+  .left-content {
+    display:none;
+}
+
+.mobile-main-heading {
+    text-align: center;
+    font-family: var(--logo-fonts);
+}
+}
