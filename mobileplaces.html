@@ -18,29 +18,25 @@
 </head>
 <body>
 
-<!-- Top navigation -->
-    <div class="navigation">
+<!-- mobile navigation -->
+    <div class="mobile-navigation-top">
         <div class="logo">
             <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-        </div>
-
-        <div class="link-list">
-                <a href="index.html">HOME</a>
-                <a href="places.html" class="active">PLACES</a>
-                <a href="about.html">ABOUT</a>
-                <a href="sayhi.html">SAY HI</a>
-            </div>
-
             <div class="search-icon">
-            <a href="index.html"><img src="images/search-icon.svg" alt="Search icon"></a>
+                <a href="index.html"><img src="images/search-icon.svg" alt="Search icon"></a>
             </div>
+        </div>
     </div>
 
-    
+        <div class="mobile-link-list">
+                <a href="index.html">HOME</a>
+                <a href="mobileplaces.html">PLACES</a>
+                <a href="about.html">ABOUT</a>
+                <a href="sayhi.html">SAY HI</a>
+        </div>
 
 <!-- Map element -->
     <div id="map"></div>
-    <div id="mobilemap"></div>
 
 <!-- Popup element -->
     <div id="casataosPopup">
@@ -81,25 +77,24 @@
 const casataos = [2.1919539228746268, 41.39831781783268];
 const nomad = [2.196298456707125, 41.39812489241088];
 const paloalto = [2.2107328106824884, 41.40453678277453];
-const centermap = [2.205423, 41.400758]
+const centermap = [2.201623, 41.398909];
 const map = new mapboxgl.Map({
 container: 'map',
 // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
 style: 'mapbox://styles/siirielli/clbifbv2e000r14odlbvsnzwn',
 center: centermap,
-zoom: 14.5 // starting zoom
+zoom: 13.5 // starting zoom
 });
-
 
 // create DOM element for the marker
 const casataosmarker = document.createElement('div');
-casataosmarker.id = 'marker-casataos';
+casataosmarker.id = 'mobile-marker-casataos';
 
 const nomadmarker= document.createElement('div');
-nomadmarker.id = 'marker-nomad';
+nomadmarker.id = 'mobile-marker-nomad';
 
 const paloaltomarker = document.createElement('div');
-paloaltomarker.id = 'marker-paloalto';
+paloaltomarker.id = 'mobile-marker-paloalto';
 
 // create the marker
 new mapboxgl.Marker(casataosmarker)

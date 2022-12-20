@@ -1091,3 +1091,30 @@ font-weight: bold;
     padding-top:2vw;
   }
 }
+
+#mobile-marker-casataos {
+  background-image: url('casataos-map.jpg');
+  background-size: cover;
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+
+  #mobile-marker-nomad {
+    background-image: url('nomad-map.jpg');
+    background-size: cover;
+    width: 18vw;
+    height: 18vw;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    
+    #mobile-marker-paloalto {
+    background-image: url('paloalto-map.jpg');
+    background-size: cover;
+    width: 18vw;;
+    height: 18vw;
+    border-radius: 50%;
+    cursor: pointer;
+    }
