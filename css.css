@@ -277,8 +277,17 @@ flex-direction: column;
 .card-text {
   color: var(--black);
   font-family: var(--body-fonts);
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   text-align:center;
+  margin-top:1vw;
+  margin-bottom:0vw;
+}
+
+.card-description {
+  color: var(--black);
+  font-family: var(--body-fonts);
+  font-size: 1.3vw;
+  padding:0vw 1.5vw 0vw;
 }
 
 .readmore-button {
@@ -293,7 +302,7 @@ flex-direction: column;
   background-color: var(--pink);
   border-radius: 20px;
   text-align: center;
-  margin-top:5vw;
+  margin-bottom:1vw;
   padding-top:0.6vw;
 }
 
@@ -1088,6 +1097,14 @@ font-weight: bold;
     font-family: var(--body-fonts);
     font-size: 4vw;
     text-align:center;
+    margin-top:5vw;
+  }
+
+  .card-description {
+    color: var(--black);
+    font-family: var(--body-fonts);
+    font-size: 4vw;
+    padding:0vw 4vw 0vw;
   }
   
   .readmore-button {
