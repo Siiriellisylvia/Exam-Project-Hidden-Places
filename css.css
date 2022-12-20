@@ -412,6 +412,7 @@ padding:2vw;
   width:44.5vw;
   height:10vw;
   align-content: center;
+  display: flex;
 }
 
 .popup-button {
@@ -784,14 +785,18 @@ input[type=submit]:hover {
       width:47.5vw;
       height:10vw;
       display:flex;
-      flex-direction: column;
-      gap: 2vw;
+      flex-direction: row;
+      gap: 21vw;
       justify-content: center;
-      align-items: center;
+
     }
 
+    .casataos-buttons {
+      margin-top:1vw;
+    }
     .casataos-button {
       display:block;
+      align-items: center;
       text-decoration: none;
       font-family:var(--body-fonts);
       font-size: 1vw;
@@ -803,13 +808,23 @@ input[type=submit]:hover {
       border-radius: 20px;
       text-align: center;
       padding-top:0.6vw;
+      margin:1vw;
     }
 
     .casataos-button:hover {
       background-color: var(--pink);
       color:var(--white);
     }
-
+  .casataos-addressbox p {
+    font-family: var(--body-fonts);
+    font-size:1vw;
+    margin-top:2vw;
+    }
+    
+  .casataos-addressbox a {
+    font-family:var(--body-fonts);
+    color:black;
+  }
 
 /* breakpoints*/
 
