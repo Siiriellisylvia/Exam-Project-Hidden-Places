@@ -1147,91 +1147,150 @@ font-weight: bold;
     border-radius: 5px;
   }
 
-  .popup-headingandimage {
-    width:100vw;
+  .mobile-popup-page {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index:3;
+    width:89vw;
+    height:160vw;
+    background-color: white;
+    border-radius: 5px;
+    margin-top:1vw;
+    margin-bottom:5vw;
+    
   }
   
-  .popup-image {
-    z-index: 5;
-    width:50vw;
+  .mobile-popup-headingandimage {
+    position:relative;
+    width:100%;
+    height:70vw;
+  }
+  
+  .mobile-popup-image {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index: 1;
     object-fit: cover;
-    object-position: 100% 55%;
+    object-position: 100% 40%;
     border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
   
-  .popup-headline {
+.mobile-popup-x {
+  position: absolute;
+  width:10vw;
+  padding:1vw;
+  z-index:3;
+  }
+  
+  .mobile-popup-headline {
     position: absolute;
-    margin-top:0.5vw;
-    margin-left:1vw;
-    z-index:5;
+    margin-top:2vw;
+    margin-left:3vw;
+    z-index:2;
     font-family: var(--headline-fonts);
     letter-spacing: 0.1vw;
-    font-size:3.5vw;
+    font-size:8vw;
     color: var(--white);
   }
   
-  .popup-content {
+  .mobile-popup-content {
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  position: relative;
+  z-index: 3;
+  background-color: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  z-index: 5;
   }
   
-  
-  .popup-x {
-    width:3vw;
-    float:right;
-    padding:1vw;
-  }
-  
-  .popup-subheading {
+  .mobile-popup-subheading {
     font-family: var(--body-fonts);
     color:var(--black);
     text-align: center;
-    font-size: var(--font-size-subheading-desktop);
-    margin:0;
+    font-size: 5vw;
+    margin-top:5vw;
+    margin-bottom:0;
+    padding-bottom:4vw;
   }
   
-  .popup-description {
+  .mobile-popup-description {
   font-family: var(--body-fonts);
-  font-size: var(--font-size-bodytext-desktop);
+  font-size: 4vw;
+  line-height: 5vw;
   color:var(--black);
-  padding:2vw;
+  padding-left:3vw;
+  padding-right:3vw;
+  margin-top:1vw;
+  
   }
   
-  .popup-footer {
-    background-color: var(--green);
-    margin-top:30vw;
-    width:44.5vw;
-    height:10vw;
-    align-content: center;
-    display: flex;
+  .mobile-popup-footer {
+      position: relative;
+      background-color: var(--green);
+      bottom:0;
+      margin-top:3vw;
+      width:100%;
+      height:20vw;
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  
+    
+  .mobile-popup-footer-text {
+    font-family: var(--body-fonts);
+    font-size: 3vw;
+    color:var(--white);
+    margin-top:2vw;
+    font-weight: bold;
+    text-align: center;
   }
   
-  .popup-button {
+    .mobile-popup-buttons {
+      margin-top:1vw;
+    }
+  
+    .mobile-popup-button {
       display:block;
+      align-items: center;
       text-decoration: none;
       font-family:var(--body-fonts);
-      font-size: 1vw;
+      font-size: 3vw;
       font-weight: bold;
-      color:black;
-      width:10vw;
-      height:2vw;
-      background-color: var(--white);
+      color:var(--black);
+      width:25vw;
+      height:5vw;
+      background-color: white;
       border-radius: 20px;
       text-align: center;
-      padding-top:0.6vw;
-      margin-top:1vw;
-      margin-left:2vw;
+      padding-top:1vw;
+      margin:2vw;
     }
   
-    .popup-button:hover {
+    .mobile-popup-button:hover {
       background-color: var(--pink);
-      color:white;
+      color:var(--white);
     }
+  .mobile-popup-addressbox p {
+    font-family: var(--body-fonts);
+    font-size:1vw;
+    margin-top:2vw;
+    }
+    
+  .mobile-popup-addressbox a {
+    font-family:var(--body-fonts);
+    color:black;
+    font-size:1vw;
+  }
+
+  /* NOMAD AND PALO ALTO MARKER FORMATTING */
 
   #mobile-marker-nomad {
     background-image: url('nomad-map.jpg');
@@ -1281,9 +1340,9 @@ font-weight: bold;
   height:100%;
   z-index: 1;
   object-fit: cover;
-  object-position: 100% 55%;
+  object-position: 100% 40%;
   border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /* .mobile-casataos-popup-x {
@@ -1295,7 +1354,7 @@ font-weight: bold;
 .mobile-casataos-headline {
   position: absolute;
   margin-top:2vw;
-  margin-left:1vw;
+  margin-left:3vw;
   z-index:2;
   font-family: var(--headline-fonts);
   letter-spacing: 0.1vw;
