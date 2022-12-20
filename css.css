@@ -286,7 +286,7 @@ flex-direction: column;
 .card-description {
   color: var(--black);
   font-family: var(--body-fonts);
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding:0vw 1.5vw 0vw;
 }
 
@@ -302,6 +302,7 @@ flex-direction: column;
   background-color: var(--pink);
   border-radius: 20px;
   text-align: center;
+  margin-top:1vw;
   margin-bottom:1vw;
   padding-top:0.6vw;
 }
@@ -420,8 +421,9 @@ padding:2vw;
   margin-top:30vw;
   width:44.5vw;
   height:10vw;
+  display:flex;
   align-content: center;
-  display: flex;
+  justify-content: center;
 }
 
 .popup-button {
