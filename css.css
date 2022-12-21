@@ -769,16 +769,15 @@ input[type=submit]:hover {
       height:10vw;
       display:flex;
       flex-direction: row;
-      gap: 21vw;
+      gap:18vw;
       justify-content: center;
-
+      align-items: center;
     }
 
     .casataos-buttons {
       margin-top:1vw;
       display:flex;
       flex-direction: column;
-      align-items: center;
       
     }
 
@@ -796,17 +795,17 @@ input[type=submit]:hover {
       border-radius: 20px;
       text-align: center;
       padding-top:0.6vw;
-      margin:1vw;
+      margin-bottom:0.5vw;
     }
 
     .casataos-button:hover {
       background-color: var(--pink);
       color:var(--white);
     }
+
   .casataos-addressbox p {
     font-family: var(--body-fonts);
     font-size:1vw;
-    margin-top:2vw;
     }
     
   .casataos-addressbox a {
