@@ -947,7 +947,7 @@ font-weight: bold;
   right:0;
   background-image: url(images/mobile-index2.png);
   background-size: cover;
-  background-repeat: cover;
+  background-repeat: no-repeat;
   background-position: 30% 50%;
   z-index:1;
 }
