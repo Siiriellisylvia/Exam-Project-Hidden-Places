@@ -86,16 +86,7 @@
     margin-right:1vw;
   }
 
-/* Style the search box inside the navigation bar */
-
-/* .navigation input[type=text] {
-    float: right;
-    padding: 0.5vw;
-    border: none;
-    margin-top: 1vw;
-    margin-right: 2vw;
-    font-size: 1rem;
-  } */
+  /* HEADER IMAGE AND CONTENT FORMATTING */
 
   .header-content {
     display: flex;
@@ -121,12 +112,7 @@
     top:0;
   }
 
-/* .main-container img {
-    position:absolute;
-    height: auto;
-    z-index:1;
-} */
-
+  /* ANIMATE THE LINE */
 .desktop-line {
   position: absolute;
   margin-top:16vw;
@@ -326,6 +312,7 @@ border-radius: 50%;
 cursor: pointer;
 }
 
+/* Formatting the popup */
 #casataosPopup {
   position:relative;
   display:flex;
@@ -340,19 +327,6 @@ cursor: pointer;
   border-radius: 5px;
 }
 
-#frontCasataosPopup{
-  position:absolute;
-  display:flex;
-  flex-direction: row;
-  margin-top:0;
-  margin-left:5vw;
-  z-index:200;
-  width:89vw;
-  height:40vw;
-  background-color: white;
-  display:none;
-  border-radius: 5px;
-}
 .popup-headingandimage {
   position: absolute;
   width:30vw;
@@ -448,6 +422,7 @@ padding:2vw;
     color:white;
   }
 
+  /* Formatting markers */
 #marker-nomad {
 background-image: url('nomad-map.jpg');
 background-size: cover;
@@ -464,12 +439,6 @@ width: 7vw;;
 height: 7vw;
 border-radius: 50%;
 cursor: pointer;
-}
-
-.nomad-popup {
-    background-color:#C36955;
-    margin-top:20vw;
-    margin-left:10vw;
 }
 
 /* ABOUT PAGE CONTENT */
@@ -664,6 +633,7 @@ margin-top:13vw;
 line-height: 1.5vw;
 }
 
+/* Form formatting */
 .sayhi-form {
   margin-left:auto;
   margin-right:auto;
@@ -884,10 +854,12 @@ input[type=submit]:hover {
   display:none;
 }
 
+/* Formatting the fixed bar on top */
 .mobile-main-heading {
     text-align: center;
     font-family: var(--logo-fonts);
 }
+
 .mobile-navigation-top {
   top:0;
   position:fixed;
@@ -904,6 +876,7 @@ input[type=submit]:hover {
   padding-right:2vw;
 }
 
+/* Formatting navigation bar on the bottom */
 .mobile-link-list {
   bottom:0;
   position:fixed;
@@ -1009,7 +982,7 @@ font-weight: bold;
     padding: 0vw 3vw 1vw;
 }
 
-
+/* Formatting mobile line animation */
 .mobile-line {
   margin-top:16vw;
   margin-left:-3vw;
@@ -1347,11 +1320,6 @@ font-weight: bold;
   border-top-right-radius: 5px;
 }
 
-/* .mobile-casataos-popup-x {
-  width:3vw;
-  float:right;
-  padding:1vw;
-} */
 
 .mobile-casataos-headline {
   position: absolute;
