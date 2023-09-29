@@ -326,6 +326,32 @@ cursor: pointer;
   display:none;
   border-radius: 5px;
 }
+#nomadPopup {
+  position:relative;
+  display:flex;
+  flex-direction: row;
+  margin-top:9vw;
+  margin-left:5vw;
+  z-index:3;
+  width:89vw;
+  height:40vw;
+  background-color: white;
+  display:none;
+  border-radius: 5px;
+}
+#paloaltoPopup {
+  position:relative;
+  display:flex;
+  flex-direction: row;
+  margin-top:9vw;
+  margin-left:5vw;
+  z-index:3;
+  width:89vw;
+  height:40vw;
+  background-color: white;
+  display:none;
+  border-radius: 5px;
+}
 
 .popup-headingandimage {
   position: absolute;
@@ -779,7 +805,6 @@ input[type=submit]:hover {
       margin-top:1vw;
       display:flex;
       flex-direction: column;
-      
     }
 
     .casataos-button {
@@ -829,6 +854,12 @@ input[type=submit]:hover {
   }
 
 #casataosPopup {
+  display: none;
+}
+#nomadPopup {
+  display: none;
+}
+#paloaltoPopup {
   display: none;
 }
 
